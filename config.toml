@@ -1,4 +1,4 @@
-baseURL = "https://minetaro12.ml/"
+baseURL = "https://minetaro12.netlify.app/"
 languageCode = "ja-jp"
 title = "minetaro12's page"
 theme = "github-style"
