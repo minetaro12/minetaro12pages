@@ -1,0 +1,32 @@
+baseURL = "https://minetaro12.ml/"
+languageCode = "ja-jp"
+title = "minetaro12's page"
+theme = "github-style"
+googleAnalytics = ""
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+#publishDir = "docs"
+
+[params]
+  author = "Oさん"
+  description = "そのへんの高校生"
+  github = "minetaro12"
+  facebook = ""
+  twitter = "1osan_x"
+  linkedin = ""
+  instagram = ""
+  tumblr = ""
+  email = ""
+  url = "https://minetaro12.ml/"
+  keywords = "blog, google analytics"
+  rss = true
+  lastmod = true
+  favicon = "/images/github.png"
+  location = "Japan"
+
+  [[params.links]]
+    title = "Link"
+    href = "https://minetaro12.ml/"
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
