@@ -28,7 +28,7 @@ tags: ["about","2021-01"]
 
 [AndroidFileHost](https://androidfilehost.com/?w=profile&uid=17248734326145681057)
 
-[Status](https://stats.uptimerobot.com/0DOJ0u2qOL)
+[Status](https://status.minetaro12.ml/)
 
 Discord: Oさん#2781
 
