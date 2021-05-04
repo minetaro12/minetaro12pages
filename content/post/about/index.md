@@ -12,7 +12,7 @@ tags: ["about","2021-01"]
 
 ## 趣味
 オーディオ,ガジェット,etc…  
-カスロムのビルドもやってたりします
+カスロムのビルドもやってたりします（過去形）
 
 ## Links
 [Twitter](https://twitter.com/1osan_x)  
@@ -28,7 +28,7 @@ tags: ["about","2021-01"]
 
 [AndroidFileHost](https://androidfilehost.com/?w=profile&uid=17248734326145681057)
 
-[Status](https://status.minetaro12.ml/)
+[Status](https://stats.uptimerobot.com/0DOJ0u2qOL)
 
 Discord: Oさん#2781
 
