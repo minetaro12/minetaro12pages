@@ -1,4 +1,4 @@
-baseURL = "https://minetaro12.ml/"
+baseURL = "https://minetaro12.pages.dev/"
 languageCode = "ja-jp"
 title = "minetaro12's page"
 theme = "github-style"
@@ -17,7 +17,7 @@ pygmentsUseClasses = true
   instagram = ""
   tumblr = ""
   email = ""
-  url = "https://minetaro12.ml/"
+  url = "https://minetaro12.pages.dev/"
   keywords = "blog, google analytics"
   rss = true
   lastmod = true
@@ -26,7 +26,7 @@ pygmentsUseClasses = true
 
   [[params.links]]
     title = "Link"
-    href = "https://minetaro12.ml/"
+    href = "https://minetaro12.pages.dev/"
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
