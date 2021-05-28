@@ -6,7 +6,6 @@ toc: false
 images:
 tags: 
   - lineageos
-  - build
 ---
 
 必要なPC（VPSでも可）  

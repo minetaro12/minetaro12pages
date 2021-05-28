@@ -2,6 +2,8 @@
 title: "About"
 date: 2021-05-28T17:55:42+09:00
 draft: false
+tags:
+  - about
 ---
 
 そのへんの高校生です
