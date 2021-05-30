@@ -10,10 +10,6 @@ tags:
 
 ![saber](/img/saber.png)
 
-## 趣味
-オーディオ,ガジェット,etc…  
-カスロムのビルドもやってたりします（過去形）
-
 ## Links
 [Twitter](https://twitter.com/1osan_x)  
 {{< rawhtml >}}<a href="https://twitter.com/1osan_x?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @1osan_x</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>{{< /rawhtml >}}
