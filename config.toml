@@ -62,6 +62,10 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     name = "github"
     url = "https://github.com/minetaro12"
 
+  [[params.social]]
+    name = "misskey"
+    url = "https://minedol12.tk/@minetaro12"
+
 [menu]
 
   [[menu.main]]
