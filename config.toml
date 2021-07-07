@@ -80,5 +80,5 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 
   [[menu.main]]
     name = "Status"
-    url = "https://stats.uptimerobot.com/0DOJ0u2qOL"
+    url = "https://status.minetaro12.tk/"
     weight = 30
