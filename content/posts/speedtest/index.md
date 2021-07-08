@@ -9,5 +9,5 @@ tags:
   - web
 ---
 
-下のリンクから計測できます 
+下のリンクから計測できます  
 [https://minetaro12.tk/speedtest](https://minetaro12.tk/speedtest)
