@@ -24,7 +24,7 @@ tags:
 
 [AndroidFileHost](https://androidfilehost.com/?w=profile&uid=17248734326145681057)
 
-[Status](http://status.minetaro12.tk/)
+[Status](http://status.minetaro12.com/)
 
 Discord: Oさん#2781
 
