@@ -10,4 +10,4 @@ tags:
 ---
 
 下のリンクから計測できます  
-[https://minetaro12.tk/speedtest](https://minetaro12.tk/speedtest)
+[https://minetaro12.com/speedtest](https://minetaro12.com/speedtest)
