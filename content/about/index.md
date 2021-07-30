@@ -14,7 +14,7 @@ tags:
 [Twitter](https://twitter.com/1osan_x)  
 {{< rawhtml >}}<a href="https://twitter.com/1osan_x?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @1osan_x</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>{{< /rawhtml >}}
 
-[Misskey](https://mineskey.ml/@minetaro12)
+[Misskey](https://msk.minetaro12.com/@minetaro12)
 
 [Mastodon](https://mstdn.jp/@minetaro12)
 
