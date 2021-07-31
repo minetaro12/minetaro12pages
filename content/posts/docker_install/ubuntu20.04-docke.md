@@ -1,0 +1,53 @@
++++
+date = 2021-07-31T01:13:00Z
+draft = true
+tags = ["Docker", "Ubuntu", "Linux"]
+title = "Ubuntu20.04へのDockeのインストール"
+
++++
+OracleCloudのA1インスタンスで確認
+
+必要なパッケージのインストール
+
+    sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+
+GPGキーの追加
+
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+リポジトリを追加
+
+    sudo add-apt-repository "deb [arch=arm64] https://download.docker.com/linux/ubuntu focal stable"
+
+※コードネームやアーキテクチャは環境により書き換える
+
+パッケージのアップデート
+
+    sudo apt update
+
+Dockerをインストール
+
+    sudo apt install docker-ce
+
+ここから下はDockerをrootなしで動かすための作業
+
+ユーザーをdockerグループに追加
+
+    sudo gpasswd -a ubuntu docker
+
+※ユーザー名は環境により書き換える
+
+ソケットファイルの権限を変える
+
+    sudo chmod 666 /var/run/docker.sock
+
+一般ユーザーで実行できることを確認
+
+    docker ps
+
+docker-composeは直接パッケージをインストールしてもうまく行かなかったため下記の方法でインストール
+
+    sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+
+※docker-compose自体をDockerコンテナで動かしてるので一番最初に実行するとイメージのダウンロードが始まる（amd64でもarm64でも使用可能）
