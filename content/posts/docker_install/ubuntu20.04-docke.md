@@ -1,7 +1,7 @@
 +++
 date = 2021-07-31T01:13:00Z
 tags = ["Docker", "Ubuntu", "Linux"]
-title = "Ubuntu20.04へのDockeのインストール"
+title = "Ubuntu20.04へのDockerのインストール"
 
 +++
 OracleCloudのA1インスタンスで確認
