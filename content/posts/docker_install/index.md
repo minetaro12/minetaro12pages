@@ -1,6 +1,6 @@
 +++
 date = 2021-07-31T01:13:00Z
-tags = ["Docker", "Ubuntu", "Linux"]
+tags = ["docker", "ubuntu", "linux"]
 title = "Ubuntu20.04へのDockerのインストール"
 
 +++
