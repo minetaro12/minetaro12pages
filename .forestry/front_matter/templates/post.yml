@@ -12,4 +12,4 @@ fields:
   name: tags
   label: tags
 pages:
-- content/posts/docker_install/ubuntu20.04-docke.md
+- content/posts/docker_install/index.md
