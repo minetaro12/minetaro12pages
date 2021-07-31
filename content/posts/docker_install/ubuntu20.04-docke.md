@@ -1,6 +1,5 @@
 +++
 date = 2021-07-31T01:13:00Z
-draft = true
 tags = ["Docker", "Ubuntu", "Linux"]
 title = "Ubuntu20.04へのDockeのインストール"
 
