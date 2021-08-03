@@ -13,3 +13,4 @@ fields:
   label: tags
 pages:
 - content/posts/docker_install/index.md
+- content/posts/expansion_oc_bootv/index.md
