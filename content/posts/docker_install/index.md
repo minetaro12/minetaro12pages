@@ -44,6 +44,24 @@ Dockerをインストール
 
     docker ps
 
+※2021/8/5追記　公式なものでcompose cliが使える
+
+（docker-composeの代わりになるもので、ほとんど同じ）
+
+    mkdir -p ~/.docker/cli-plugins
+    cd ~/.docker/cli-plugins
+    #amd64の場合
+    wget -O docker-compose https://github.com/docker/compose-cli/releases/download/v2.0.0-beta.6/docker-compose-linux-amd64
+    #arm64の場合
+    wget -O docker-compose https://github.com/docker/compose-cli/releases/download/v2.0.0-beta.6/docker-compose-linux-arm64
+    chmod +x docker-compose
+
+バージョンが上がっている場合があるので、リンクは下のページより確認
+
+[https://github.com/docker/compose-cli/releases](https://github.com/docker/compose-cli/releases "https://github.com/docker/compose-cli/releases")
+
+***
+
 docker-composeは直接パッケージをインストールしてもうまく行かなかったため下記の方法でインストール
 
     sudo curl -L --fail https://raw.githubusercontent.com/linuxserver/docker-docker-compose/master/run.sh -o /usr/local/bin/docker-compose
