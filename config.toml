@@ -1,7 +1,7 @@
 baseURL = "https://minetaro12.com/"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja"
-title = "minetaro12page"
+title = "minetaro12"
 theme = "hermit"
 # enableGitInfo = true
 pygmentsCodefences  = true
