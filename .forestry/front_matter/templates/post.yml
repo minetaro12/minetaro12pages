@@ -14,4 +14,4 @@ fields:
 pages:
 - content/posts/docker_install/index.md
 - content/posts/expansion_oc_bootv/index.md
-- content/posts/wal-g_backup/postgresql-wal-g.md
+- content/posts/wal-g_backup/index.md
