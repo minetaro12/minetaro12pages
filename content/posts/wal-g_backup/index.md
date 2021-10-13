@@ -57,3 +57,26 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
     wal-g.sh backup-push /var/lib/postgresql/12/main
 
 これでオブジェクトストレージにフルバックアップされる
+
+    wal-g.sh backup-list
+
+これでバックアップができていれば成功
+
+## 4. 差分バックアップの設定
+
+/etc/postgresql/12/main/conf.d/archive.confを作成し次のように書き込む
+
+    archive_mode = on                                 
+    archive_command = '/usr/local/bin/wal-g.sh wal-push %p'  
+    archive_timeout = 60
+    wal_level = replica
+    restore_command = '/usr/local/bin/wal-g.sh wal-fetch "%f" "%p"'
+
+ここでは60秒間隔で設定した
+
+     sudo systemctl restart postgresql
+     tail -f /var/log/postgresql/postgresql-12-main.log
+
+エラーが出ずにバックアップできていればOK
+
+## 5. 定期的にフルバックアップする
