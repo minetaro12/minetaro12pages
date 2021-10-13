@@ -80,3 +80,13 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 エラーが出ずにバックアップできていればOK
 
 ## 5. 定期的にフルバックアップする
+
+ここではcronを使用する
+
+    sudo -u postgres crontab -e
+
+ここに書き込む
+
+    0 3 * * * /usr/local/bin/wal-g.sh backup-push /var/lib/postgresql/12/main/ ; /usr/local/bin/wal-g.sh delete retain 7 --confirm
+
+ここでは毎日深夜3時にフルバックアップと古い物を削除（7個残す）するようにした
