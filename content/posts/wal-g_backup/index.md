@@ -11,9 +11,11 @@ title = "PostgresqlをWAL-Gでバックアップ&リストア"
 
 [https://qiita.com/atsu1125/items/676d24c0473ad94b3f2b](https://qiita.com/atsu1125/items/676d24c0473ad94b3f2b)
 
+[https://blog.1q77.com/2019/06/wal-g/](https://blog.1q77.com/2019/06/wal-g/)
+
 ***
 
-環境
+## 環境
 
 OracleCloudのA1インスタンス
 
@@ -23,4 +25,35 @@ PostgreSQL12
 
 ***
 
-## 1\.WAL-Gをインストールする
+## 1. WAL-Gをインストールする
+
+[ここ](https://github.com/wal-g/wal-g/releases)からバイナリをダウンロードして/usr/local/binに配置
+
+ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/docs/PostgreSQL.md)を参考にビルドする
+
+## 2. 環境変数の設定
+
+上記のサイトを参考に/usr/local/binにwal-g.shを配置
+
+オブジェクトストレージを使用するので次のように書き込む
+
+    #!/bin/bash
+    
+    export AWS_ACCESS_KEY_ID=""
+    export AWS_SECRET_ACCESS_KEY=""
+    export AWS_ENDPOINT="https://s3.example.com"
+    export WALG_S3_PREFIX="s3://backetname/"
+    #export AWS_S3_FORCE_PATH_STYLE="true"
+    export PGPORT="5432"
+    export PGHOST="/var/run/postgresql"
+    export WALG_COMPRESSION_METHOD="brotli"
+    
+    exec /usr/local/bin/wal-g "$@"
+
+`AWS_S3_FORCE_PATH_STYLE`はオブジェクトストレージのURLの形式が`https://s3.example.com/backetname`のようになってる場合に設定する
+
+## 3. フルバックアップしてみる
+
+    wal-g.sh backup-push /var/lib/postgresql/12/main
+
+これでオブジェクトストレージにフルバックアップされる
