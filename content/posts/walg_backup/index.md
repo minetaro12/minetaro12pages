@@ -106,12 +106,11 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
 ## 2. クラスタの作成
 
-クラスタを作成してデータディレクトリを空にし、/var/lib/postgresql/12/test/内にrecovery.signalを作成
+クラスタを作成してデータディレクトリを空にする
 
     sudo su postgres 
     pg_createcluster 12 test
     rm -rf /var/lib/postgresql/12/test/*
-    touch /var/lib/postgresql/12/test/recovery.signal
     exit
 
 ## 3. 設定ファイルの編集
@@ -132,4 +131,5 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
 次のコマンドで差分を復元しクラスタを動かす
 
+    sudo -u postgres touch /var/lib/postgresql/12/test/recovery.signal
     sudo systemctl start postgresql@12-test
