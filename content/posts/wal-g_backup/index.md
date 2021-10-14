@@ -1,6 +1,5 @@
 +++
 date = 2021-10-14T10:51:00Z
-draft = true
 tags = ["linux", "ubuntu", "wal-g", "postgresql"]
 title = "PostgresqlをWAL-Gでバックアップ&リストア"
 
@@ -113,3 +112,23 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
     sudo rm -rf /var/lib/postgresql/12/test/*
 
 /var/lib/postgresql/12/test/内にrecovery.signalという空のファイルを作成する
+
+## 3. 設定をバックアップ元と同じにする
+
+バックアップ元の/etc/postgresql/12/main/postgresql.confと/etc/postgresql/12/test/postgresql.confの内容を同じにする（しないとエラーになる場合がある）
+
+## 4. 差分復元コマンドの設定
+
+/etc/postgresql/12/main/conf.d/restore.confを作成し次のように書き込む
+
+    restore_command = '/usr/local/bin/wal-g.sh wal-fetch "%f" "%p"'
+
+## 5. リストアする
+
+次のコマンドで最新のフルバックアップをリストアする
+
+    sudo -u postgres wal-g.sh backup-fetch /var/lib/postgresql/12/test/ LATEST
+
+次のコマンドで差分を復元しクラスタを動かす
+
+    sudo systemctl start postgresql@12-test
