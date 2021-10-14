@@ -8,10 +8,12 @@ fields:
 - type: datetime
   name: date
   label: date
+  config:
+    display_utc: false
+    export_format: YYYY-MM-DDTh:mm:00Z+0900
 - type: list
   name: tags
   label: tags
 pages:
 - content/posts/docker_install/index.md
 - content/posts/expansion_oc_bootv/index.md
-- content/posts/wal-g_backup/index.md
