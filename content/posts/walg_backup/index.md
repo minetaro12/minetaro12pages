@@ -108,7 +108,7 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
 クラスタを作成してデータディレクトリを空にする
 
-    sudo su postgres 
+    sudo su - postgres 
     pg_createcluster 12 test
     rm -rf /var/lib/postgresql/12/test/*
     exit
@@ -129,7 +129,11 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
     sudo -u postgres wal-g.sh backup-fetch /var/lib/postgresql/12/test/ LATEST
 
-次のコマンドで差分を復元しクラスタを動かす
+次のコマンドで最新の差分を復元しクラスタを動かす
 
     sudo -u postgres touch /var/lib/postgresql/12/test/recovery.signal
     sudo systemctl start postgresql@12-test
+
+正常に復元できればrecovery.signalが削除される
+
+※クラスタの削除は`sudo -u postgres  pg_dropcluster 12 test`
