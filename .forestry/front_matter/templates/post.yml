@@ -10,7 +10,7 @@ fields:
   label: date
   config:
     display_utc: false
-    export_format: YYYY-MM-DDTh:mm:00Z+0900
+    export_format: YYYY-MM-DDThh:mm:ssZ+0900
 - type: list
   name: tags
   label: tags
