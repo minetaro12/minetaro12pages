@@ -1,5 +1,5 @@
 +++
-date = 2021-10-13T22:51:00Z
+date = 2021-10-13T22:52:00Z
 tags = ["linux", "ubuntu", "wal-g", "postgresql"]
 title = "PostgresqlをWAL-Gでバックアップ&リストア"
 
