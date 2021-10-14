@@ -1,8 +1,8 @@
 +++
-date = 2021-10-14T10:51:00Z
+date = 2021-10-13T10:51:00Z
 tags = ["linux", "ubuntu", "wal-g", "postgresql"]
 title = "PostgresqlをWAL-Gでバックアップ&リストア"
-draft = "false"
+
 +++
 こちらのサイトを参考にしました。
 
