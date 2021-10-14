@@ -1,5 +1,5 @@
 +++
-date = 2021-08-03T08:45:00Z
+date = 2021-08-03T08:44:00Z
 tags = ["oraclecloud", "linux"]
 title = "OracleCloudのブートボリュームの拡張"
 
