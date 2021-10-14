@@ -52,9 +52,13 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
 `AWS_S3_FORCE_PATH_STYLE`はオブジェクトストレージのURLの形式が`https://s3.example.com/backetname`のようになってる場合に設定する
 
+    sudo chmod +x r/usr/local/bin/wal-g.sh
+
+必ず実行権限を付与する
+
 ## 3. フルバックアップしてみる
 
-    wal-g.sh backup-push /var/lib/postgresql/12/main
+    sudo -u postgres wal-g.sh backup-push /var/lib/postgresql/12/main
 
 これでオブジェクトストレージにフルバックアップされる
 
@@ -90,3 +94,22 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
     0 3 * * * /usr/local/bin/wal-g.sh backup-push /var/lib/postgresql/12/main/ ; /usr/local/bin/wal-g.sh delete retain 7 --confirm
 
 ここでは毎日深夜3時にフルバックアップと古い物を削除（7個残す）するようにした
+
+***
+
+## リストア
+
+別マシンでバックアップ元と同じバージョンのPostgreSQLをインストールする
+
+## 1. WAL-Gをインストールし設定ファイルをコピーする
+
+バックアップ設定時と同じようにインストールしwal-g.shを/usr/local/binに配置する
+
+## 2. クラスタの作成
+
+クラスタを作成してデータディレクトリを空にする
+
+    sudo -u postgres pg_createcluster 12 test
+    sudo rm -rf /var/lib/postgresql/12/test/*
+
+/var/lib/postgresql/12/test/内にrecovery.signalという空のファイルを作成する
