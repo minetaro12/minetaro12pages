@@ -51,7 +51,7 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
 `AWS_S3_FORCE_PATH_STYLE`はオブジェクトストレージのURLの形式が`https://s3.example.com/backetname`のようになってる場合に設定する
 
-    sudo chmod +x r/usr/local/bin/wal-g.sh
+    sudo chmod +x /usr/local/bin/wal-g.sh
 
 必ず実行権限を付与する
 
