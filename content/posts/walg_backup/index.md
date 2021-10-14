@@ -109,9 +109,11 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 クラスタを作成してデータディレクトリを空にする
 
     sudo -u postgres pg_createcluster 12 test
-    sudo rm -rf /var/lib/postgresql/12/test/*
+    sudo -u postgres rm -rf /var/lib/postgresql/12/test/*
 
 /var/lib/postgresql/12/test/内にrecovery.signalという空のファイルを作成する
+
+    sudo -u postgres touch /var/lib/postgresql/12/test/recovery.signal
 
 ## 3. 設定をバックアップ元と同じにする
 
