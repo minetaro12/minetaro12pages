@@ -106,18 +106,17 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
 ## 2. クラスタの作成
 
-クラスタを作成してデータディレクトリを空にする
+クラスタを作成してデータディレクトリを空にし、/var/lib/postgresql/12/test/内にrecovery.signalを作成
 
-    sudo -u postgres pg_createcluster 12 test
-    sudo -u postgres rm -rf /var/lib/postgresql/12/test/*
+    sudo su postgres 
+    pg_createcluster 12 test
+    rm -rf /var/lib/postgresql/12/test/*
+    touch /var/lib/postgresql/12/test/recovery.signal
+    exit
 
-/var/lib/postgresql/12/test/内にrecovery.signalという空のファイルを作成する
+## 3. 設定ファイルの編集
 
-    sudo -u postgres touch /var/lib/postgresql/12/test/recovery.signal
-
-## 3. 設定をバックアップ元と同じにする
-
-バックアップ元の/etc/postgresql/12/main/postgresql.confと/etc/postgresql/12/test/postgresql.confの内容を同じにする（しないとエラーになる場合がある）
+必要に応じて/etc/postgresql/12/test/postgresql.confの編集をする
 
 ## 4. 差分復元コマンドの設定
 
