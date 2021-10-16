@@ -136,4 +136,4 @@ ARM64向けはないので[ここ](https://github.com/wal-g/wal-g/blob/master/do
 
 正常に復元できればrecovery.signalが削除される
 
-※クラスタの削除は`sudo -u postgres  pg_dropcluster 12 test`
+※クラスタの削除は`sudo -u postgres  pg_dropcluster 12 test --stop`
