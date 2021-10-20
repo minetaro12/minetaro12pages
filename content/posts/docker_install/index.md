@@ -44,21 +44,20 @@ Dockerをインストール
 
     docker ps
 
-※2021/8/5追記　公式なものでcompose cliが使える
+※2021/8/5追記　公式なものでcompose cliが使える  
+※2021/10/20修正　リンクを変更しました
 
 （docker-composeの代わりになるもので、ほとんど同じ）
 
     mkdir -p ~/.docker/cli-plugins
     cd ~/.docker/cli-plugins
     #amd64の場合
-    wget -O docker-compose https://github.com/docker/compose-cli/releases/download/v2.0.0-beta.6/docker-compose-linux-amd64
+    wget -O docker-compose https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64
     #arm64の場合
-    wget -O docker-compose https://github.com/docker/compose-cli/releases/download/v2.0.0-beta.6/docker-compose-linux-arm64
+    wget -O docker-compose https://github.com/docker/compose/releases/latest/download/docker-compose-linux-aarch64
     chmod +x docker-compose
-
-バージョンが上がっている場合があるので、リンクは下のページより確認
-
-[https://github.com/docker/compose-cli/releases](https://github.com/docker/compose-cli/releases "https://github.com/docker/compose-cli/releases")
+  
+`docker-compose`ではなく`docker compose`で使う
 
 ***
 
