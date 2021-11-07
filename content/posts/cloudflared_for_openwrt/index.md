@@ -1,6 +1,6 @@
 +++
-date = 2021-11-07T17:31:00+09:00
-tags = [linux", "cloudflare", "openwrt"]
+date = 2021-11-07T08:31:00Z
+tags = ["linux", "cloudflare", "openwrt"]
 title = "OpenWrtでCloudflaredを動かしてみる"
 
 +++
