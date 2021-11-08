@@ -54,7 +54,7 @@ STOP=15
 start() {
         # commands to launch application
         if [ ! -e /tmp/cloudflared ];then
-                wget https://github.com/minetaro12/openwrt-cloudflared/releases/download/2021.11.0/cloudflared-linux-ramips -O /tmp/cloudflared
+                wget https://github.com/minetaro12/openwrt-cloudflared/releases/download/2021.11.0/cloudflared-linux-mipsel -O /tmp/cloudflared
         fi
         chmod +x /tmp/cloudflared
         tmux new-session -s cloudflared-ssh -d "/tmp/cloudflared --hostname hogehoge.com --url ssh://localhost:22"
