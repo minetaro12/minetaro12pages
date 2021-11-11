@@ -57,7 +57,7 @@ start() {
                 wget https://github.com/minetaro12/openwrt-cloudflared/releases/download/2021.11.0/cloudflared-linux-mipsel -O /tmp/cloudflared
         fi
         chmod +x /tmp/cloudflared
-        tmux new-session -s cloudflared-ssh -d "/tmp/cloudflared --hostname hogehoge.com --url ssh://localhost:22"
+        tmux new-session -s cloudflared-ssh -d "/tmp/cloudflared tunnel --hostname hogehoge.com --url ssh://localhost:22"
 }
 
 stop() {
