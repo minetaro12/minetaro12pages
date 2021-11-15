@@ -37,6 +37,14 @@ title = "OpenWrtでCloudflaredを動かしてみる"
 
 終わると`bin`内にパッケージができる
 
+## バイナリだけ欲しい場合
+
+[これ](https://github.com/cloudflare/cloudflared)をクローン
+
+`GOOS=linux GOARCH=mipsle GOMIPS=softfloat go build -trimpath -ldflags "-s -w" ./cmd/cloudflared`でビルド
+
+アーキテクチャは必要に応じて変更してください
+
 ## 動かす
 
 バイナリが20MBくらいあるので、exrootで拡張するかパッケージを解凍してtmp等別の場所に入れてうごかすことをおすすめします。
