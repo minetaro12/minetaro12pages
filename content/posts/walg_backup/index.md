@@ -22,6 +22,8 @@ Ubuntu20.04LTS
 
 PostgreSQL12
 
+Misskeyのデータベースをバックアップします
+
 ***
 
 ## 1. WAL-Gをインストールする
